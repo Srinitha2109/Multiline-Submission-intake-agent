@@ -1,0 +1,88 @@
+{
+  "submission_id": "SUB-001",
+  "status": "complete",
+  "processed_at": "2026-05-04T17:16:03.895409",
+  "documents_processed": 3,
+  "classification": {
+    "primary_line": "commercial_auto",
+    "secondary_lines": [],
+    "confidence": 0.97,
+    "reasoning": "Step 1: The document types present in this submission are 'application', 'fleet_schedule', and 'loss_history'.\nStep 2: The 'application' document specifies 'commercial_auto' as the requested coverage. The 'fleet_schedule' document provides details about 85 vehicles (tractors, trailers), their value, garaging locations, and radius of operation, all of which are essential for commercial auto underwriting. The 'loss_history' document lists claim types such as 'collision', 'cargo_damage', and 'liability', which are directly relevant to commercial auto and motor truck cargo (often bundled or closely related).\nStep 3: The 'requested_coverage' field in the application explicitly states 'commercial_auto'.\nStep 4: All documents consistently point towards commercial auto coverage. The business type 'trucking_and_logistics' reinforces the need for commercial auto. There are no other coverage types requested or supported by other document types (e.g., no property schedules or general liability specific operations descriptions). Therefore, this is a single-line submission for commercial auto.\nStep 5: Based on the strong evidence from the requested coverage, the fleet schedule details, and the nature of the loss history, the classification is 'commercial_auto' with high confidence."
+  },
+  "validation": {
+    "completeness_score": 1.0,
+    "field_status": {
+      "vehicle_count": {
+        "status": "complete",
+        "value": 85,
+        "note": null
+      },
+      "fleet_schedule": {
+        "status": "complete",
+        "value": {
+          "vehicle_count": 85,
+          "vehicle_types": [
+            "tractor",
+            "trailer"
+          ],
+          "model_years": [
+            2023,
+            2022,
+            2021
+          ],
+          "total_fleet_value": 12325000,
+          "garaging_locations": [
+            "90001",
+            "89101"
+          ],
+          "radius_of_operation": "500_miles",
+          "states_operated": [
+            "CA",
+            "NV",
+            "AZ",
+            "OR",
+            "WA"
+          ],
+          "driver_list_provided": true
+        },
+        "note": "Fleet schedule document is present and contains required information."
+      },
+      "driver_list": {
+        "status": "complete",
+        "value": true,
+        "note": "Indicated as provided within the fleet schedule."
+      },
+      "loss_history": {
+        "status": "complete",
+        "value": {
+          "total_claims": 12,
+          "total_incurred": 892000,
+          "largest_loss": 185000,
+          "loss_ratio": 0.68,
+          "policy_period": "2023-2026",
+          "claim_types": [
+            "collision",
+            "cargo_damage",
+            "liability"
+          ]
+        },
+        "note": "Loss history document is present and contains required information."
+      },
+      "radius_of_operation": {
+        "status": "complete",
+        "value": "500_miles",
+        "note": null
+      }
+    },
+    "missing_fields": [],
+    "validation_notes": "All required fields for commercial auto submission are complete. The submission is 100% complete based on the specified requirements."
+  },
+  "routing": {
+    "queue": "Auto Queue",
+    "routing_reason": "Completeness score is 1.0 (not less than 0.7), so Rule 1 does not apply. Line of business is commercial_auto, matching Rule 2.",
+    "priority": "routine",
+    "action_needed": "none"
+  },
+  "summary": "**Submission Intake Summary Report**\n\n**Submission ID:** SUB-001\n**Insured Name:** Pacific Freight Lines Inc.\n\n---\n\n**Applicant Details:** \u2705\n*   **Insured Name:** Pacific Freight Lines Inc.\n*   **Business Type:** Trucking and Logistics\n*   **Industry SIC Code:** 4213\n*   **Annual Revenue:** $45,000,000\n*   **Employee Count:** 350\n*   **Desired Effective Date:** July 01, 2026\n*   **Requested Coverage:** Commercial Auto\n*   **Requested Limits:**\n    *   Combined Single Limit (CSL): $1,000,000\n    *   Aggregate: $5,000,000\n*   **Years in Business:** 18 years\n*   **Prior Insurance Carrier:** Old Republic Insurance\n\n**Fleet Details:** \u2705\n*   **Vehicle Count:** 85\n*   **Vehicle Types:** Tractor, Trailer\n*   **Newest Model Years:** 2023, 2022, 2021\n*   **Total Fleet Value:** $12,325,000\n*   **Garaging Locations (Zip Codes):** 90001, 89101\n*   **Radius of Operation:** 500 miles\n*   **States Operated:** California (CA), Nevada (NV), Arizona (AZ), Oregon (OR), Washington (WA)\n*   **Driver List Provided:** Yes\n\n**Loss History Details:** \u2705\n*   **Total Claims:** 12\n*   **Total Incurred Losses:** $892,000\n*   **Largest Single Loss:** $185,000\n*   **Loss Ratio:** 0.68 (68%)\n*   **Loss History Period:** 2023-2026\n*   **Claim Types:** Collision, Cargo Damage, Liability\n\n---\n\n**Missing Information:**\n*   There are no missing fields. All required information for this submission has been provided. \u2705\n\n**Submission Classification:**\n*   This submission has been classified for the **Commercial Auto** line of business because it specifically requests commercial auto coverage and includes all necessary information for this type of policy.\n\n**Completeness Score:**\n*   **100% Complete** (All required information is present) \u2705\n\n**Queue Assignment and Next Steps:**\n*   **Assigned to Queue:** Auto Queue\n*   **Next Action:** No immediate action is needed from the clerk. This submission is complete and ready for further processing by the underwriting team.",
+  "user_role": "clerk"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "intake_orchestrator",
+  "description": "Dual-mode intake controller for insurance submissions. Pipeline mode processes document bundles. Chat mode answers status queries.",
+  "url": "http://localhost:8000/orchestrator",
+  "version": "1.0.0",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "skills": [
+    {
+      "id": "process_submission",
+      "name": "Process Submission",
+      "description": "Run full pipeline for one submission"
+    },
+    {
+      "id": "process_batch",
+      "name": "Process Batch",
+      "description": "Run pipeline for multiple submissions"
+    },
+    {
+      "id": "get_status",
+      "name": "Get Submission Status",
+      "description": "Look up processed submission result"
+    }
+  ]
+}

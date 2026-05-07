@@ -1,0 +1,38 @@
+{
+  "document_type": "fleet_schedule",
+  "submission_id": "SUB-001",
+  "vehicle_count": 85,
+  "vehicles": [
+    {
+      "vin": "1HGBH41JXMN109186",
+      "year": 2023,
+      "make": "Freightliner",
+      "model": "Cascadia",
+      "type": "tractor",
+      "value": 145000,
+      "garaging_zip": "90001"
+    },
+    {
+      "vin": "2FMDK48C07BA12345",
+      "year": 2022,
+      "make": "Kenworth",
+      "model": "T680",
+      "type": "tractor",
+      "value": 138000,
+      "garaging_zip": "90001"
+    },
+    {
+      "vin": "3HAMMMML0FL123456",
+      "year": 2021,
+      "make": "International",
+      "model": "LT Series",
+      "type": "trailer",
+      "value": 55000,
+      "garaging_zip": "89101"
+    }
+  ],
+  "radius_of_operation": "500_miles",
+  "states_operated": ["CA", "NV", "AZ", "OR", "WA"],
+  "driver_list_provided": true,
+  "total_fleet_value": 12325000
+}

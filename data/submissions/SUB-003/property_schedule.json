@@ -1,0 +1,17 @@
+{
+  "document_type": "property_schedule",
+  "submission_id": "SUB-004",
+  "properties": [
+    {
+      "address": "500 Commerce Dr, Dallas, TX 75201",
+      "construction_type": "masonry",
+      "occupancy": "warehouse",
+      "square_footage": 50000,
+      "year_built": 2010,
+      "building_value": 5500000,
+      "contents_value": 1800000,
+      "protection_class": 4,
+      "sprinkler": true
+    }
+  ]
+}

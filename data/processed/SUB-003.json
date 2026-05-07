@@ -1,0 +1,25 @@
+{
+  "submission_id": "SUB-003",
+  "status": "complete",
+  "processed_at": "2026-05-04T11:32:57.851186",
+  "documents_processed": 3,
+  "classification": {
+    "primary_line": "unknown",
+    "confidence": 0.5,
+    "reasoning": "Error parsing"
+  },
+  "validation": {
+    "completeness_score": 0.5,
+    "field_status": {},
+    "missing_fields": [],
+    "validation_notes": "Error"
+  },
+  "routing": {
+    "queue": "Hold Queue",
+    "routing_reason": "completeness_score is less than 0.7",
+    "priority": "routine",
+    "action_needed": "none"
+  },
+  "summary": "**Verbose Report (User Role: clerk)**\n\n**Submission ID: SUB-003**\n**Insured Name: NovaTech Consulting LLC**\n\n**Extracted Fields:**\n\n* **Insured Name:** NovaTech Consulting LLC \ud83d\udce3\n* **Business Type:** Technology consulting \ud83e\udd16\n* **Industry SIC:** 7372 \ud83d\udcbc\n* **Annual Revenue:** $12,000,000 \ud83d\udcb8\n* **Employee Count:** 85 \ud83d\udc65\n* **Effective Date:** 2026-09-01 \ud83d\udcc6\n* **Requested Coverage:** General Liability \ud83d\udeab\ufe0f\n* **Requested Limits:**\n\t+ Per Occurrence: $1,000,000 \ud83d\udcb8\n\t+ Aggregate: $2,000,000 \ud83d\udcb8\n* **Years in Business:** 7 \ud83d\udc4d\n* **Prior Carrier:** Chubb Insurance \ud83d\udcca\n\n**Missing Fields:**\n\n* **Home Office Address:** Please ask the broker to provide the home office address for NovaTech Consulting LLC.\n* **Primary Services:** Please ask the broker to provide a detailed description of the primary services offered by NovaTech Consulting LLC.\n* **Certifications and Licenses:** Please ask the broker to provide any relevant certifications and licenses held by NovaTech Consulting LLC.\n* **Key Partnerships:** Please ask the broker to provide a list of key partnerships for NovaTech Consulting LLC.\n\n**Classification:** NovaTech Consulting LLC is a technology consulting firm with a focus on IT consulting and software development.\n\n**Classification Confidence:** 1.0 \ud83d\udcaf\n\n**Completeness Score:** 11/12 \ud83d\udca1\n\n**Queue Assignment:**\n\n* **Queue:** Hold Queue \u26a0\ufe0f\n* **Routing Reason:** Completeness score is less than 0.7\n* **Priority:** Routine \ud83d\udcc6\n* **Action Needed:** None\n\n**Validation Result:**\n\n* **Validation Notes:** Error \ud83d\udeab\ufe0f\n\n---\n\n**Concise Report (User Role: manager)**\n\n**Submission ID: SUB-003**\n**Insured Name: NovaTech Consulting LLC**\n\n| Field | Value |\n| --- | --- |\n| Annual Revenue | $12,000,000 |\n| Employee Count | 85 |\n| Industry SIC | 7372 |\n| Years in Business | 7 |\n\n**Classification and Confidence:** Technology consulting with a confidence level of 1.0\n**Completeness Score:** 83% (11/12)\n**Queue Assignment:** Hold Queue, priority: routine\n\n**Missing Fields:**\n\n* Home Office Address\n* Primary Services\n* Certifications and Licenses\n* Key Partnerships",
+  "user_role": "clerk"
+}

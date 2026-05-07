@@ -1,0 +1,15 @@
+{
+  "document_type": "building_details",
+  "submission_id": "SUB-002",
+  "roof_type": "flat_membrane",
+  "roof_year": 2018,
+  "electrical_updated": 2015,
+  "plumbing_updated": 2010,
+  "heating_type": "forced_air_gas",
+  "alarm_system": true,
+  "fire_suppression": "wet_pipe_sprinkler",
+  "stories": 1,
+  "loading_docks": 8,
+  "security_cameras": true,
+  "last_inspection_year": 2024
+}

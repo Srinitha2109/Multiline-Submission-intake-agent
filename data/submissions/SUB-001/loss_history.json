@@ -1,0 +1,32 @@
+{
+  "document_type": "loss_history",
+  "submission_id": "SUB-001",
+  "policy_period": "2023-2026",
+  "total_claims": 12,
+  "total_incurred": 892000,
+  "largest_loss": 185000,
+  "loss_ratio": 0.68,
+  "claims": [
+    {
+      "year": 2024,
+      "type": "collision",
+      "description": "Jackknife incident on I-5",
+      "amount": 185000,
+      "status": "closed"
+    },
+    {
+      "year": 2023,
+      "type": "cargo_damage",
+      "description": "Water damage to freight",
+      "amount": 42000,
+      "status": "closed"
+    },
+    {
+      "year": 2022,
+      "type": "liability",
+      "description": "Third party property damage",
+      "amount": 67000,
+      "status": "closed"
+    }
+  ]
+}

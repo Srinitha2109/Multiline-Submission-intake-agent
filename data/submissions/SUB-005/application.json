@@ -1,0 +1,18 @@
+{
+  "document_type": "application",
+  "submission_id": "SUB-006",
+  "insured_name": "Global Multi-Line Logistics",
+  "business_type": "logistics_and_storage",
+  "industry_sic": "4225",
+  "annual_revenue": 85000000,
+  "employee_count": 520,
+  "effective_date": "2026-10-01",
+  "requested_coverage": ["commercial_auto", "commercial_property"],
+  "requested_limits": {
+    "auto_combined_single_limit": 2000000,
+    "property_building": 15000000,
+    "property_contents": 5000000
+  },
+  "years_in_business": 25,
+  "prior_carrier": "Liberty Mutual"
+}

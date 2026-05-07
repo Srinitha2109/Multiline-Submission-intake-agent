@@ -1,0 +1,22 @@
+{
+  "name": "router",
+  "description": "Routes submissions to correct underwriting queue and generates intake summary reports.",
+  "url": "http://localhost:8003/router",
+  "version": "1.0.0",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "skills": [
+    {
+      "id": "route_submission",
+      "name": "Route Submission",
+      "description": "Assign to Auto, Property, GL, Mixed or Hold Queue"
+    },
+    {
+      "id": "generate_summary",
+      "name": "Generate Intake Summary",
+      "description": "Create intake report adapted to user role"
+    }
+  ]
+}

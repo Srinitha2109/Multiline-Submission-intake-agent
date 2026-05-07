@@ -1,0 +1,22 @@
+{
+  "name": "validator",
+  "description": "Validates submission completeness and classifies line of business using chain of thought reasoning.",
+  "url": "http://localhost:8002/validator",
+  "version": "1.0.0",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "skills": [
+    {
+      "id": "validate_completeness",
+      "name": "Validate Completeness",
+      "description": "Check all required fields are present"
+    },
+    {
+      "id": "classify_line",
+      "name": "Classify Line of Business",
+      "description": "Determine Auto, Property, GL or Multi-line"
+    }
+  ]
+}

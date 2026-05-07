@@ -1,0 +1,67 @@
+{
+  "submission_id": "SUB-002",
+  "status": "complete",
+  "processed_at": "2026-05-04T17:24:30.570854",
+  "documents_processed": 3,
+  "classification": {
+    "primary_line": "commercial_property",
+    "secondary_lines": [],
+    "confidence": 0.97,
+    "reasoning": "Step 1: The document types present in this submission are 'application', 'building_details', and 'property_schedule'.\nStep 2: The 'application' document lists 'commercial_property' as the requested coverage. The 'building_details' document provides specific information about building characteristics (roof, electrical, plumbing, heating, fire suppression, etc.), which is directly relevant to commercial property insurance. The 'property_schedule' document lists multiple building addresses, construction types, square footage, and building values, all of which are key components of a commercial property submission.\nStep 3: The 'requested_coverage' field in the application explicitly specifies only 'commercial_property'.\nStep 4: All available documents (application, building_details, property_schedule) consistently support a commercial property line. The application only requests commercial property coverage, and there are no documents pertaining to other lines like commercial auto or general liability. Therefore, this is a single-line submission.\nStep 5: Based on the strong evidence from all documents and the explicit requested coverage, the classification is 'commercial_property'."
+  },
+  "validation": {
+    "completeness_score": 1.0,
+    "field_status": {
+      "building_values": {
+        "status": "complete",
+        "value": [
+          8500000,
+          2100000
+        ],
+        "note": null
+      },
+      "construction_type": {
+        "status": "complete",
+        "value": [
+          "fire_resistive",
+          "masonry"
+        ],
+        "note": null
+      },
+      "occupancy": {
+        "status": "complete",
+        "value": [
+          "warehouse_distribution",
+          "office"
+        ],
+        "note": null
+      },
+      "square_footage": {
+        "status": "complete",
+        "value": [
+          75000,
+          12000
+        ],
+        "note": null
+      },
+      "protection_class": {
+        "status": "complete",
+        "value": [
+          3,
+          3
+        ],
+        "note": null
+      }
+    },
+    "missing_fields": [],
+    "validation_notes": "All required fields for commercial_property are complete."
+  },
+  "routing": {
+    "queue": "Property Queue",
+    "routing_reason": "Line of business is commercial_property.",
+    "priority": "routine",
+    "action_needed": "none"
+  },
+  "summary": "**Submission Intake Report: SUB-002 for Midwest Distribution Corp.**\n\nThis report summarizes all the information we've gathered for this submission.\n\n---\n\n**Applicant Information:** \u2705\n*   **Insured Name:** Midwest Distribution Corp.\n*   **Business Type:** Warehouse and Distribution\n*   **Industry Code (SIC):** 5040\n*   **Annual Revenue:** $28,000,000\n*   **Number of Employees:** 180\n*   **Years in Business:** 12 years\n*   **Prior Insurance Carrier:** Travelers Insurance\n*   **Requested Coverage Start Date:** August 1, 2026\n\n**Requested Coverage & Limits:** \u2705\n*   **Coverage Type:** Commercial Property\n*   **Building Limit:** $8,500,000\n*   **Contents Limit:** $3,200,000\n*   **Business Interruption Limit:** $2,000,000\n\n**Building Characteristics (Main Location):** \u2705\n*   **Roof Type:** Flat Membrane\n*   **Roof Last Updated:** 2018\n*   **Electrical System Last Updated:** 2015\n*   **Plumbing System Last Updated:** 2010\n*   **Heating Type:** Forced Air Gas\n*   **Alarm System Present:** Yes\n*   **Fire Suppression System:** Wet Pipe Sprinkler\n*   **Number of Stories:** 1\n*   **Number of Loading Docks:** 8\n*   **Security Cameras Present:** Yes\n*   **Last Inspection Year:** 2024\n\n**Property Schedule (Multiple Locations):** \u2705\n*   **Total Properties:** 2\n\n    **Property 1:**\n    *   **Address:** 1200 Industrial Blvd, Chicago, IL 60601\n    *   **Construction Type:** Fire Resistive (means it's built to resist fire well)\n    *   **Square Footage:** 75,000 sq ft\n    *   **Building Value:** $8,500,000\n    *   **Occupancy Type:** Warehouse Distribution\n    *   **Protection Class:** 3 (a lower number means better fire protection)\n    *   **Sprinkler System Present:** Yes\n\n    **Property 2:**\n    *   **Address:** 340 Commerce Way, Chicago, IL 60602\n    *   **Construction Type:** Masonry (usually brick, stone, or concrete)\n    *   **Square Footage:** 12,000 sq ft\n    *   **Building Value:** $2,100,000\n    *   **Occupancy Type:** Office\n    *   **Protection Class:** 3\n    *   **Sprinkler System Present:** No\n\n---\n\n**Missing Information:** \u2705\nAll critical fields needed for initial processing are complete. No further information is immediately required from the broker.\n\n---\n\n**Submission Classification:** \u2705\nThis submission is for **Commercial Property** insurance. The system has automatically recognized this based on the requested coverage type.\n\n---\n\n**Completeness Score:** \u2705\nAll 5 required fields for commercial property underwriting were found and are complete (5 of 5).\n\n---\n\n**Next Steps:** \u2705\n*   **Assigned Queue:** Property Queue\n*   **Action Needed:** No immediate action is needed from you. This submission has been automatically routed to the Property underwriting team for review.",
+  "user_role": "clerk"
+}

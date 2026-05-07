@@ -1,0 +1,28 @@
+{
+  "document_type": "fleet_schedule",
+  "submission_id": "SUB-004",
+  "vehicle_count": 32,
+  "vehicles": [
+    {
+      "vin": "4T1BF3EK9AU123456",
+      "year": 2022,
+      "make": "Ford",
+      "model": "F-650",
+      "type": "medium_truck",
+      "value": 78000,
+      "garaging_zip": "75201"
+    },
+    {
+      "vin": "5XYZU3LB4DG123456",
+      "year": 2021,
+      "make": "Isuzu",
+      "model": "NPR",
+      "type": "cargo_van",
+      "value": 45000,
+      "garaging_zip": "75201"
+    }
+  ],
+  "radius_of_operation": "300_miles",
+  "states_operated": ["TX", "OK", "LA"],
+  "total_fleet_value": 2890000
+}

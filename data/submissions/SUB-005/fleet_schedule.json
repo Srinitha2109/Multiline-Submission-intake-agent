@@ -1,0 +1,20 @@
+{
+  "document_type": "fleet_schedule",
+  "submission_id": "SUB-006",
+  "vehicle_count": 50,
+  "vehicles": [
+    {
+      "vin": "1ABC123",
+      "year": 2024,
+      "make": "Peterbilt",
+      "model": "579",
+      "type": "tractor",
+      "value": 160000,
+      "garaging_zip": "75201"
+    }
+  ],
+  "radius_of_operation": "Unlimited",
+  "states_operated": ["TX", "OK", "NM"],
+  "driver_list_provided": true,
+  "total_fleet_value": 8000000
+}

@@ -1,0 +1,17 @@
+{
+  "document_type": "property_schedule",
+  "submission_id": "SUB-006",
+  "properties": [
+    {
+      "address": "1000 Logistics Way, Dallas, TX 75201",
+      "construction_type": "fire_resistive",
+      "occupancy": "warehouse",
+      "square_footage": 100000,
+      "year_built": 2010,
+      "building_value": 15000000,
+      "contents_value": 5000000,
+      "protection_class": 2,
+      "sprinkler": true
+    }
+  ]
+}

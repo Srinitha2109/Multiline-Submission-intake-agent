@@ -1,0 +1,28 @@
+{
+  "document_type": "property_schedule",
+  "submission_id": "SUB-002",
+  "properties": [
+    {
+      "address": "1200 Industrial Blvd, Chicago, IL 60601",
+      "construction_type": "fire_resistive",
+      "occupancy": "warehouse_distribution",
+      "square_footage": 75000,
+      "year_built": 2005,
+      "building_value": 8500000,
+      "contents_value": 3200000,
+      "protection_class": 3,
+      "sprinkler": true
+    },
+    {
+      "address": "340 Commerce Way, Chicago, IL 60602",
+      "construction_type": "masonry",
+      "occupancy": "office",
+      "square_footage": 12000,
+      "year_built": 1998,
+      "building_value": 2100000,
+      "contents_value": 450000,
+      "protection_class": 3,
+      "sprinkler": false
+    }
+  ]
+}

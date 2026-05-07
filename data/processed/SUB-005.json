@@ -1,0 +1,29 @@
+{
+  "submission_id": "SUB-005",
+  "status": "complete",
+  "processed_at": "2026-05-05T11:04:07.432571",
+  "documents_processed": 3,
+  "classification": {
+    "primary_line": "multi_line",
+    "secondary_lines": [
+      "commercial_auto",
+      "commercial_property"
+    ],
+    "confidence": 0.98,
+    "reasoning": "Step 1: Documents present are 'application', 'fleet_schedule', and 'property_schedule'.\nStep 2: The 'fleet_schedule' document provides details about vehicles (e.g., vehicle_count, vehicle_types), which clearly indicates a 'commercial_auto' line of business. The 'property_schedule' document provides details about buildings (e.g., building_addresses, building_values), which indicates a 'commercial_property' line of business.\nStep 3: The 'application' document's 'requested_coverage' field explicitly lists both 'commercial_auto' and 'commercial_property'.\nStep 4: Since two distinct lines of business ('commercial_auto' and 'commercial_property') are requested in the application and supported by dedicated documents ('fleet_schedule' and 'property_schedule'), this submission is determined to be 'multi_line'.\nStep 5: The final classification is 'multi_line' with secondary lines being 'commercial_auto' and 'commercial_property'. The confidence is based on the lowest confidence score of the extracted documents pertinent to the classification (0.98 from application and fleet_schedule documents)."
+  },
+  "validation": {
+    "completeness_score": 1.0,
+    "field_status": {},
+    "missing_fields": [],
+    "validation_notes": "No specific required fields were provided in the 'Required fields for multi_line' list. By definition, a submission with no required fields is considered 100% complete."
+  },
+  "routing": {
+    "queue": "Mixed Queue",
+    "routing_reason": "Line of business is multi_line, matching Rule 5.",
+    "priority": "routine",
+    "action_needed": "none"
+  },
+  "summary": "**Intake Summary Report**\n\n**Submission ID:** SUB-006\n**Insured Name:** Global Multi-Line Logistics\n\n---\n\n**Application Details:**\n\n*   **Insured Name:** Global Multi-Line Logistics \u2705\n*   **Business Type:** Logistics and Storage \u2705\n*   **Industry (SIC Code):** 4225 \u2705 (This code identifies the primary business activity.)\n*   **Annual Revenue:** $85,000,000 \u2705\n*   **Employee Count:** 520 \u2705\n*   **Effective Date:** 2026-10-01 \u2705\n*   **Requested Coverage:** Commercial Auto, Commercial Property \u2705\n*   **Requested Limits:**\n    *   Auto Combined Single Limit: $2,000,000 \u2705\n    *   Property Building: $15,000,000 \u2705\n    *   Property Contents: $5,000,000 \u2705\n*   **Years in Business:** 25 years \u2705\n*   **Prior Carrier:** Liberty Mutual \u2705\n\n**Fleet Schedule Details:**\n\n*   **Vehicle Count:** 50 \u2705\n*   **Vehicle Types:** Tractor \u2705\n*   **Model Years:** 2024 \u2705\n*   **Total Fleet Value:** $8,000,000 \u2705\n*   **Garaging Locations (ZIP codes):** 75201 \u2705\n*   **Radius of Operation:** Unlimited \u2705\n*   **States Operated:** TX, OK, NM \u2705\n*   **Driver List Provided:** Yes \u2705\n\n**Property Schedule Details:**\n\n*   **Property Count:** 1 \u2705\n*   **Building Address(es):** 1000 Logistics Way, Dallas, TX 75201 \u2705\n*   **Construction Type(s):** Fire Resistive \u2705\n*   **Square Footage:** 100,000 sq ft \u2705\n*   **Building Value(s):** $15,000,000 \u2705\n*   **Occupancy Type(s):** Warehouse \u2705\n*   **Protection Class:** 2 \u2705\n*   **Sprinkler Present:** Yes \u2705\n\n---\n\n**Missing Information:**\n\n*   There are no missing fields in this submission. All required information, as determined by the system, has been provided. \u2705\n\n---\n\n**Submission Classification:**\n\n*   This submission is classified as **Multi-Line**. This means it involves more than one type of insurance, in this case, both Commercial Auto and Commercial Property.\n\n---\n\n**Completeness Score:**\n\n*   **100% Complete** (All fields necessary for processing this submission have been provided.)\n\n---\n\n**Routing and Next Steps:**\n\n*   **Assigned Queue:** Mixed Queue\n*   **Priority:** Routine\n*   **Action Needed:** No immediate action is required from you. The submission is complete and has been routed correctly.",
+  "user_role": "clerk"
+}

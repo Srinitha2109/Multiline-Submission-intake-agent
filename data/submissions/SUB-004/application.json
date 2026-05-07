@@ -1,0 +1,16 @@
+{
+  "document_type": "application",
+  "submission_id": "SUB-005",
+  "insured_name": "GreenLeaf Services LLC",
+  "business_type": "landscaping_services",
+  "industry_sic": "0782",
+  "employee_count": 45,
+  "effective_date": "2026-08-15",
+  "requested_coverage": ["general_liability"],
+  "requested_limits": {
+    "per_occurrence": 500000,
+    "aggregate": 1000000
+  },
+  "years_in_business": 3,
+  "prior_carrier": "Progressive Commercial"
+}

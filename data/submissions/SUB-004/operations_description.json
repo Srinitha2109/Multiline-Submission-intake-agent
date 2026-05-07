@@ -1,0 +1,12 @@
+{
+  "document_type": "operations_description",
+  "submission_id": "SUB-005",
+  "primary_operations": "Commercial landscaping and lawn care",
+  "locations": ["Phoenix AZ", "Scottsdale AZ"],
+  "employee_count": 45,
+  "contractors_used": false,
+  "prior_claims": 1,
+  "hazards": "equipment_use_chemical_application",
+  "safety_programs": ["equipment_training"],
+  "subcontractors": false
+}
