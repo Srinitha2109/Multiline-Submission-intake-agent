@@ -6,11 +6,13 @@ from opentelemetry import trace
 from opentelemetry.trace import Status, StatusCode
 from prompts.prompt_manager import PromptManager
 from agents.llm_client import llm_client as model
+from tracing.pipeline_context import attach_intake_semantics
 
 load_dotenv()
 pm = PromptManager()
 tracer = trace.get_tracer("document_parser")
 MODEL_NAME = os.getenv("PARSER_MODEL", os.getenv("LLM_MODEL", "gemini-1.5-flash"))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DOCUMENT_TYPE_MAP = {
     "application": "application",
@@ -38,6 +40,7 @@ async def extract_fields(document_content: dict, document_type: str) -> dict:
     submission_id = document_content.get("submission_id", "unknown")
 
     with tracer.start_as_current_span("parser.extract_fields") as span:
+        attach_intake_semantics(span, "document_parser")
         span.set_attribute("openinference.span.kind", "LLM")
         span.set_attribute("document_type", document_type)
         span.set_attribute("submission_id", submission_id)
@@ -87,7 +90,7 @@ async def parse_document_async(file_path: str) -> dict:
     return await extract_fields(document_content, document_type)
 
 async def parse_all_documents_parallel(submission_id: str) -> list:
-    folder_path = f"data/submissions/{submission_id}"
+    folder_path = os.path.join(BASE_DIR, f"data/submissions/{submission_id}")
     if not os.path.exists(folder_path):
         raise FileNotFoundError(f"Submission folder not found: {folder_path}")
     doc_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith(".json")]

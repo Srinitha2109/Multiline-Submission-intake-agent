@@ -6,6 +6,7 @@ from opentelemetry import trace
 from opentelemetry.trace import Status, StatusCode
 from prompts.prompt_manager import PromptManager
 from agents.llm_client import llm_client as model
+from tracing.pipeline_context import attach_intake_semantics
 
 load_dotenv()
 tracer = trace.get_tracer("validator")
@@ -23,6 +24,7 @@ async def classify_line_of_business(parsed_data: list) -> dict:
     prompt = pm.get_prompt("lob_classification", "v1", {"parsed_data_json": json.dumps(parsed_data, indent=2)})
     
     with tracer.start_as_current_span("validator.classify_lob") as span:
+        attach_intake_semantics(span, "validator")
         span.set_attribute("openinference.span.kind", "LLM")
         span.set_attribute("llm.model_name", MODEL_NAME)
         span.set_attribute("llm.prompt_template", "lob_classification_v1")
@@ -71,6 +73,7 @@ async def validate_completeness(parsed_data: list, line_of_business: str) -> dic
     })
     
     with tracer.start_as_current_span("validator.validate_completeness") as span:
+        attach_intake_semantics(span, "validator")
         span.set_attribute("openinference.span.kind", "LLM")
         span.set_attribute("line_of_business", line_of_business)
         span.set_attribute("llm.model_name", MODEL_NAME)

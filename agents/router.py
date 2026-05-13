@@ -6,6 +6,7 @@ from opentelemetry import trace
 from opentelemetry.trace import Status, StatusCode
 from prompts.prompt_manager import PromptManager
 from agents.llm_client import llm_client as model
+from tracing.pipeline_context import attach_intake_semantics
 
 load_dotenv()
 pm = PromptManager()
@@ -20,6 +21,7 @@ async def determine_routing(line_of_business: str, validation_result: dict) -> d
     })
     
     with tracer.start_as_current_span("router.determine_routing") as span:
+        attach_intake_semantics(span, "router")
         span.set_attribute("openinference.span.kind", "LLM")
         span.set_attribute("llm.model_name", MODEL_NAME)
         span.set_attribute("llm.prompt_template", "routing_decision_v1")
@@ -70,6 +72,7 @@ async def generate_summary(parsed_data: list, routing_result: dict, user_profile
     })
     
     with tracer.start_as_current_span("router.generate_summary") as span:
+        attach_intake_semantics(span, "router")
         span.set_attribute("openinference.span.kind", "LLM")
         span.set_attribute("llm.model_name", MODEL_NAME)
         span.set_attribute("llm.prompt_template", "intake_summary_v1")

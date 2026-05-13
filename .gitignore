@@ -1,6 +1,6 @@
 # Secrets
 .env
-google_credentials.json
+credentials.json
 
 # Environments
 .venv

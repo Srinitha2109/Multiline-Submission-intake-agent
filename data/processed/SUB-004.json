@@ -1,54 +1,129 @@
 {
-  "submission_id": "SUB-004",
-  "status": "complete",
-  "processed_at": "2026-05-04T18:00:00.405451",
-  "documents_processed": 2,
-  "classification": {
-    "primary_line": "general_liability",
-    "secondary_lines": [],
+  "parsed_data": {
     "confidence": 0.98,
-    "reasoning": "Step 1: The document types present in this submission are 'application' and 'operations_description'.\nStep 2: The 'operations_description' document details the primary business activities (commercial landscaping and lawn care) and potential hazards (equipment use, chemical application), which are crucial for underwriting General Liability. The 'application' document contains general business information relevant to any line but specifically requests General Liability.\nStep 3: The 'requested_coverage' field in the 'application' explicitly states 'general_liability'.\nStep 4: All evidence points consistently to General Liability. The operations described (landscaping services) are typical exposures covered by General Liability. There are no documents indicating other lines of business such as commercial auto (e.g., no fleet schedule) or commercial property (e.g., no property schedule).\nStep 5: Based on the requested coverage and the supporting operations description, the classification is 'general_liability' with high confidence."
-  },
-  "validation": {
-    "completeness_score": 0.8,
-    "field_status": {
-      "industry_sic_code": {
-        "status": "complete",
-        "value": "0782",
-        "note": null
+    "document_type": "application",
+    "extracted_fields": {
+      "business_type": "landscaping_services",
+      "effective_date": "2026-08-15",
+      "employee_count": 45,
+      "industry_sic": "0782",
+      "insured_name": "GreenLeaf Services LLC",
+      "prior_carrier": "Progressive Commercial",
+      "requested_coverage": [
+        "general_liability"
+      ],
+      "requested_limits": {
+        "aggregate": 1000000,
+        "per_occurrence": 500000
       },
-      "annual_revenue": {
-        "status": "missing",
-        "value": null,
-        "note": "Required field 'annual_revenue' was not found in any document."
-      },
-      "employee_count": {
-        "status": "complete",
-        "value": 45,
-        "note": null
-      },
-      "operations_description": {
-        "status": "complete",
-        "value": "Commercial landscaping and lawn care",
-        "note": null
-      },
-      "prior_claims": {
-        "status": "complete",
-        "value": 1,
-        "note": null
-      }
+      "years_in_business": 3
     },
-    "missing_fields": [
-      "annual_revenue"
-    ],
-    "validation_notes": "The general liability submission is mostly complete, with the key field 'annual_revenue' missing. All other required fields were successfully extracted."
+    "notes": "",
+    "submission_id": "SUB-005"
   },
-  "routing": {
-    "queue": "GL Queue",
-    "routing_reason": "Line of business is general_liability, matching Rule 4.",
-    "priority": "routine",
-    "action_needed": "request_missing_info"
+  "validation_results": {
+    "classify_line_of_business_response": {
+      "confidence": 0.5,
+      "primary_line": "unknown",
+      "reasoning": "Error parsing"
+    },
+    "validate_completeness_response": {
+      "completeness_score": 1,
+      "field_status": {
+        "business_type": {
+          "note": null,
+          "status": "complete",
+          "value": "landscaping_services"
+        },
+        "contractors_used": {
+          "note": null,
+          "status": "complete",
+          "value": false
+        },
+        "effective_date": {
+          "note": null,
+          "status": "complete",
+          "value": "2026-08-15"
+        },
+        "employee_count": {
+          "note": null,
+          "status": "complete",
+          "value": 45
+        },
+        "hazards": {
+          "note": null,
+          "status": "complete",
+          "value": "equipment_use_chemical_application"
+        },
+        "industry_sic": {
+          "note": null,
+          "status": "complete",
+          "value": "0782"
+        },
+        "insured_name": {
+          "note": null,
+          "status": "complete",
+          "value": "GreenLeaf Services LLC"
+        },
+        "locations": {
+          "note": null,
+          "status": "complete",
+          "value": [
+            "Phoenix AZ",
+            "Scottsdale AZ"
+          ]
+        },
+        "primary_operations": {
+          "note": null,
+          "status": "complete",
+          "value": "Commercial landscaping and lawn care"
+        },
+        "prior_carrier": {
+          "note": null,
+          "status": "complete",
+          "value": "Progressive Commercial"
+        },
+        "prior_claims": {
+          "note": null,
+          "status": "complete",
+          "value": 1
+        },
+        "requested_coverage": {
+          "note": null,
+          "status": "complete",
+          "value": [
+            "general_liability"
+          ]
+        },
+        "requested_limits": {
+          "note": null,
+          "status": "complete",
+          "value": {
+            "aggregate": 1000000,
+            "per_occurrence": 500000
+          }
+        },
+        "safety_programs": {
+          "note": null,
+          "status": "complete",
+          "value": [
+            "equipment_training"
+          ]
+        },
+        "subcontractors": {
+          "note": null,
+          "status": "complete",
+          "value": false
+        },
+        "years_in_business": {
+          "note": null,
+          "status": "complete",
+          "value": 3
+        }
+      },
+      "missing_fields": [],
+      "validation_notes": "All required fields are present and extracted with high confidence. The submission is complete."
+    }
   },
-  "summary": "**Submission: SUB-004 - GreenLeaf Services LLC**\n\n| Field                       | Value                                   |\n| :-------------------------- | :-------------------------------------- |\n| Insured Name                | GreenLeaf Services LLC                  |\n| Business Type               | landscaping_services                    |\n| Industry SIC                | 0782                                    |\n| Employee Count              | 45                                      |\n| Effective Date              | 2026-08-15                              |\n| Requested Coverage          | general_liability                       |\n| Requested Limits (Per Occ)  | $500,000                                |\n| Requested Limits (Aggregate)| $1,000,000                              |\n| Years in Business           | 3                                       |\n| Prior Carrier               | Progressive Commercial                  |\n| Primary Operations          | Commercial landscaping and lawn care    |\n| Locations                   | Phoenix AZ, Scottsdale AZ               |\n| Prior Claims                | 1                                       |\n| Hazards                     | equipment_use_chemical_application      |\n| Safety Programs             | equipment_training                      |\n\nClassification: General Liability (derived from requested coverage and routing rules) - Data Extraction Confidence: 95%\nCompleteness Score: 80%\nQueue Assignment: GL Queue (Action Needed: request_missing_info)\n\n**Missing Fields:**\n*   annual_revenue",
-  "user_role": "manager"
+  "router_summary": "SUB-004 - GreenLeaf Services LLC\n\nInsured Information:\nInsured Name: GreenLeaf Services LLC\nBusiness Type: Landscaping Services\nIndustry SIC Code: 0782\nEmployee Count: 45\nYears in Business: 3\nPrior Carrier: Progressive Commercial\n\nCoverage Details:\nEffective Date: August 15, 2026\nRequested Coverage: General Liability\nRequested Limits: Per Occurrence 500000, Aggregate 1000000\n\nOperations Description:\nPrimary Operations: Commercial landscaping and lawn care\nHazards: Equipment use, Chemical application\nLocations: Phoenix AZ, Scottsdale AZ\nPrior Claims: 1\nContractors Used: No\nSafety Programs: Equipment training\n\nMissing Information:\n\u2139\ufe0f Missing required information regarding prior claims.\n\u2139\ufe0f Missing required information regarding specific locations.\n\u2139\ufe0f Missing required information regarding revenue.\n\nClassification:\nCompleteness Score: 0.0\n\nQueue Assignment:\nQueue: Hold Queue\nNext Steps: Request missing information from broker.\nReasoning: Completeness score is less than the threshold, triggering Rule 1."
 }

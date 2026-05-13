@@ -234,28 +234,74 @@ Validation result     : {validation_result_json}
 Routing decision      : {routing_json}
 User role             : {user_role}
 
-If user_role is clerk write a VERBOSE report:
-- Start with submission ID and insured name
-- Show every extracted field with clear label
-- For each missing field explain what it is and
-  tell clerk exactly what to ask broker for
-- Show classification with plain explanation
-- Show completeness score as fraction eg 11 of 12
-- Show queue assignment with next steps
-- Use emoji indicators like checkmark and warning
-- Use plain simple language throughout
+STRICT RULES - NEVER violate these:
+- Output plain readable text ONLY. No JSON. No markdown code fences.
+- Do NOT write "I am a clerk", "I am a manager", or ANY sentence mentioning the user role.
+- Do NOT introduce yourself or state your role in any way.
+- The user_role field is ONLY used to pick verbose vs concise below.
+- Begin your response DIRECTLY with the first header line (submission id and insured name).
 
-If user_role is manager write a CONCISE report:
-- One header line with submission ID and insured
-- Table with columns: Field, Value for key metrics
-- Single line: Classification and confidence
-- Single line: Completeness score percentage
-- Single line: Queue assignment
-- Bullet list of missing fields if any
-- No field by field breakdown
-- No explanations of what fields mean
+If user_role is clerk, use this EXACT section order and titles (fill from parsed/validation/routing data; omit a subsection only if there is truly no data for it):
 
-Return the formatted summary as plain readable text."""
+First line: the submission id and insured legal name separated by a hyphen and space, e.g. SUB-001 - Pacific Freight Lines Inc. (use real values from the parsed application).
+
+Insured Information:
+
+* Insured Name: ...
+* Business Type: ...
+* Industry SIC Code: ...
+* Annual Revenue: ... (use US currency style e.g. $45,000,000)
+* Employee Count: ...
+* Years in Business: ... (if present in parsed data; otherwise say "Not stated")
+* Prior Carrier: ...
+
+Coverage Details:
+
+* Effective Date: ... (spell month name, e.g. July 1, 2026)
+* Requested Coverage: ... (human readable, e.g. Commercial Auto)
+* Requested Limits:
+  * Combined Single Limit: ...
+  * Aggregate Limit: ...
+
+Fleet Information:
+
+* Vehicle Count: ... (e.g. 85 vehicles)
+* Vehicle Types: ... (if present; else infer briefly from fleet_schedule or say "Not stated")
+* Model Years: ... (comma-separated)
+* Total Fleet Value: ... (US currency)
+* Garaging Locations: ... (dedupe ZIPs, comma-separated)
+* Radius of Operation: ... (e.g. 500 miles)
+* States Operated In: ... (spell state names with abbreviations in parentheses)
+
+Loss History (Policy Period ...):
+
+* Total Claims: ...
+* Total Incurred Loss: ...
+* Largest Loss: ...
+* Loss Ratio: ...
+* Claim Types: ... (comma-separated Title Case)
+
+Missing Information:
+
+* If anything is missing or partial per validation, start lines with the warning emoji then plain English.
+* What to ask for: Explain what to request from the broker (e.g. complete driver list with license numbers) when driver_list or similar is incomplete.
+
+Classification: ...
+
+Completeness Score: ... (e.g. "8 out of 10 fields are complete" — derive from validation field_status and required fields)
+
+Queue Assignment:
+
+* Queue: ...
+* Next Steps: ...
+* Reasoning: ... (one short sentence from routing_reason and action_needed)
+
+If user_role is manager, use the EXACT SAME section order, titles, and bullet points as the clerk above. However, keep the descriptions slightly more brief and concise where possible (for example, in the Missing Information or Reasoning sections). 
+- Do NOT remove any of the main sections. 
+- Ensure it is highly readable and structured.
+- No JSON. No code blocks.
+
+Use human-readable labels (Title Case section titles). Format currency and large numbers clearly."""
   }
 
 }
